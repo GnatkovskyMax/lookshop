@@ -2,40 +2,68 @@
 	background-color: #ffffff;
 text-transform:uppercase;
 	&-top{
-		background-color: #000;
-		padding-left:40px;
+		  background:#000;
 	}
 	&-pad_top{
-		padding-top: 37px;
-	}
+		
+		teft-align:center;
+
+	 }
+	 
+	
 	&-box{
 		.inline-block;
+       padding-top: 37px;
+	   padding-bottom: 37px;   
+        font:30px @base_font_family ;
 		border-left: 2px solid #444444;
 		color: #ffffff;
-
+         & span{display:none;}
 		&:first-child{
 			border-left: none;
 		}
-	    &.account:before{
+	    &.account{
+	    	padding-left: 50px;
+	    	padding-right: 50px;
+	    	padding-top: 37px;
+	   padding-bottom: 70px;
+            &:before{ 
            content:'';
-        
            .inline-block(@va:top);
-           .sprite(@account);
+           .sprite(@account-big);  
+
 	    }
-	   
+	   }
 	    &.search{
 	    	&:before{
            content:'';
            .inline-block(@va:middle);
-           .sprite(@search);
+           .sprite(@search-big);
            }
+          float:right; 
+          margin:0 20px 0 20px; 
+          padding:0 0 0 20px;  
+	    }
+	    &.us{
+	    	 float:left; 
+	    	 &:after{
+	    	 	content:'';
+	    	 	.inline-block;
+	    	 	width:0;
+	    	 	height:0;
+	    	 	border:10px solid transparent;
+	    	 	border-top-color:white;
+	    	 	vertical-align:bottom;
+	    	 	margin-left:5px;
+	    	 }
 	    }
 	}
 
 	.custom{	
-		.text-left;
+	  
 		color: #838383;
 		text-transform:uppercase;
+		background:@white; 
 	}
 
 }
