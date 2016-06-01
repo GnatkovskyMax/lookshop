@@ -1,7 +1,9 @@
 .header{
 	background-color: #ffffff;
+text-transform:uppercase;
 	&-top{
 		background-color: #000;
+		padding-left:40px;
 	}
 	&-pad_top{
 		padding-top: 37px;
@@ -10,14 +12,30 @@
 		.inline-block;
 		border-left: 2px solid #444444;
 		color: #ffffff;
+
 		&:first-child{
 			border-left: none;
 		}
+	    &.account:before{
+           content:'';
+        
+           .inline-block(@va:top);
+           .sprite(@account);
+	    }
+	   
+	    &.search{
+	    	&:before{
+           content:'';
+           .inline-block(@va:middle);
+           .sprite(@search);
+           }
+	    }
 	}
-	.custom{
-		.text-center;
-		text-transform: uppercase;
+
+	.custom{	
+		.text-left;
 		color: #838383;
+		text-transform:uppercase;
 	}
 
 }

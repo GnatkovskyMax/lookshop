@@ -1,6 +1,8 @@
 @import 'imports/_setting';
 @import 'imports/_mixins';
 @import 'imports/sprite';
+@import 'imports/areset';
+
 /*--------------icons------------------*/
 .icon-account{
 	.sprite(@account-big);
@@ -19,9 +21,13 @@
 .col{
 	float: left;
 }
+@import 'imports/header';
 .grid-univers(xs, 2);
 @media screen and (min-width: 768px){
 	.grid-univers(m, 9);
+	.header-pad_top{padding-top:10px;}
+		
+	
 }
 @media screen and (min-width: 970px){
 	.grid-univers(l, 12);
