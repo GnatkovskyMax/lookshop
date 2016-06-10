@@ -1,51 +1,48 @@
 .header{
+	font-family: sans-serif;
 	background-color: #ffffff;
 text-transform:uppercase;
 	&-top{
 		  background:#000;
+
 	}
 	&-pad_top{
 		
-		teft-align:center;
-
+		
+@media screen and (min-width: 768px){
+		.text-right; height:30px;
+		
+		}
 	 }
 	 
 	
 	&-box{
+		@media screen and (max-width: 768px){
+			.pad-top-bottom;
+		}
+		@media screen and (min-width: 768px){
+			 font:11px @base_font_family ;
+			line-height:30px;
+
+		}
+        
+		text-align:center;
 		.inline-block;
-       padding-top: 37px;
-	   padding-bottom: 37px;   
-        font:30px @base_font_family ;
+         
+        font-size:30px;
 		border-left: 2px solid #444444;
 		color: #ffffff;
-         & span{display:none;}
+        
 		&:first-child{
 			border-left: none;
 		}
-	    &.account{
-	    	padding-left: 50px;
-	    	padding-right: 50px;
-	    	padding-top: 37px;
-	   padding-bottom: 70px;
-            &:before{ 
-           content:'';
-           .inline-block(@va:top);
-           .sprite(@account-big);  
+		&.us{
+			@media screen and (max-width: 768px){
+			 width:20%;float:left;
 
-	    }
-	   }
-	    &.search{
-	    	&:before{
-           content:'';
-           .inline-block(@va:middle);
-           .sprite(@search-big);
-           }
-          float:right; 
-          margin:0 20px 0 20px; 
-          padding:0 0 0 20px;  
-	    }
-	    &.us{
-	    	 float:left; 
+		}
+			
+	    	  
 	    	 &:after{
 	    	 	content:'';
 	    	 	.inline-block;
@@ -54,16 +51,257 @@ text-transform:uppercase;
 	    	 	border:10px solid transparent;
 	    	 	border-top-color:white;
 	    	 	vertical-align:bottom;
-	    	 	margin-left:5px;
+	    	 	margin-left:10%;
+	    	 	
+
+	    	 	@media screen and (min-width: 768px){
+	    	 		.inline-block(@va:middle);
+			    width:0;
+	    	 	height:0;
+	    	 	border:5px solid transparent;
+	    	 	border-top-color:white;
+	    	 	margin-left:9px;
+		}
 	    	 }
 	    }
+	    &.account{
+	    	box-sizing:border-box; 
+	    	
+@media screen and (max-width: 768px){
+			 width:59%;
+              }
+           @media screen and (min-width: 768px){
+			 padding:0 15px;
+              }   
+            text-align:center;
+            .inline-block;
+            &:before{ 
+            margin-right:12px;
+            content:'';
+            margin-top:-6px;
+            .inline-block;
+
+            .sprite(@account-big);  
+                   @media screen and (min-width: 768px){
+		           margin-right:10px;
+
+                   content:'';
+                   .inline-block(@va:middle);
+                   .sprite(@account);  
+                 }
+	        }
+	   }
+	    &.search{
+              padding-bottom:30px;
+	    		@media screen and (max-width: 768px){
+			 width:20%;
+
+		}
+			    		@media screen and (min-width: 768px){
+			 padding:0 9px;border-right: 2px solid #444444;
+
+		}
+	    	& span{
+	    		display:none;
+	    		@media screen and (min-width: 970px){
+			.inline-block;
+		}
+
+	    	}
+	    	 float:right;
+	    	
+	    	&:before{
+           content:'';
+           .inline-block(@va:top);
+           .sprite( @search-big);  
+@media screen and (min-width: 768px){
+			 content:'';
+           .inline-block(@va:middle);
+           .sprite( @search);  
+
+		}
+           }
+       
+	    }
+	    
 	}
 
-	.custom{	
-	  
+	.custom{
+		line-height:30px;
+.text-center;
+	 font-size:30px;
+		@media screen and (min-width: 768px){background:#000;
+			 font-size:15px;	float:left;
+			 height:30px; 
+		}
+		@media screen and (max-width: 768px){
+			.pad-top-bottom;
+		}
+		
 		color: #838383;
 		text-transform:uppercase;
-		background:@white; 
+		background:@white;
 	}
+}
+.logo-small{
+padding:58px 0 53px 0;
+text-align:center;
 
+
+.l-txt{
+	&:after{
+	content:'';
+    .sprite( @logo);
+	display:inline-block;
+}
+	&,&+.txt {font-size:93px;
+	font-family:"OMG";
+	text-transform:lowercase;
+}
+
+	}
+	@media screen and (min-width: 768px){
+		display:none;
+		}
+}
+.middle{
+	vertical-align:bottom;
+}
+.logo768{
+	height:106px;
+	display:none;
+line-height:106px;
+	img{
+		transform:translateY(50%);
+
+	}
+	@media screen and (min-width: 768px){
+		.inline-block;
+		}
+}
+.menu768{
+      
+	position:relative;
+	&:after{
+		content:'';
+        position:absolute;
+        transform:translateY(-50%);
+        top:50%;
+        right:30px;
+        .sprite( @menu-small);
+	}
+padding-left:30px;
+line-height:100px;
+height:100px;
+	@media screen and (min-width: 768px){
+		&:after{
+        .sprite( @menu768);
+	}
+		height:50px;
+		line-height:50px;
+		}
+	@media screen and (min-width: 970px){
+		display:none;
+		}
+}
+.menu970{
+	font-size:1rem;
+	height:106px;
+line-height:106px;
+text-transform: lowercase;
+	&>ul>li{
+		.inline-block;
+		margin-left:20px;
+		&:first-child{
+			margin:0;
+		}
+		 &:after{
+	    	 	.triangle;
+	    	 }
+	}
+	display:none;
+	@media screen and (min-width: 970px){
+		float:right;
+		.inline-block;
+		}
+}
+
+.cart-item{
+	padding-bottom:21px;
+color:#949393; 
+	@media screen and (min-width: 768px){
+		.float-right;
+	   padding:21px 0 21px 0;
+		width:215px;
+		line-height:33px;
+		}
+	& .cart{
+		position: relative;
+		&:after{
+	    	 	content:'';
+	    	 	width:0;
+	    	 	height:0;
+	    	 	border:5px solid transparent;
+	    	 	border-top-color:#949393;
+	    	 	position: absolute;
+	    	 	.inline-block(middle);
+	    	 	right:4.5%;
+                top:50%;
+	    	 	transform:translateY(-2px);
+	    	 }
+		span{
+			text-transform:lowercase;
+		}
+		 padding-left:10px;
+	text-transform:capitalize;
+		box-sizing: border-box;
+        width:215px;
+		height:33px;
+		.text-left;
+		border:1px solid #949393;
+		border-bottom:none;
+	display:none;
+	@media screen and (min-width: 768px){
+		.inline-block;
+		}
+}
+& .item{
+	
+	&:before{
+    content:'';
+    position:absolute;
+    top:22px;
+    left:30px;
+    .sprite(@bag-big);  
+      	@media screen and (min-width: 768px){
+      		top:50%;
+      		left:0;
+      		transform:translate(50%,-50%);
+.sprite(@bag); 
+		
+		}
+	}
+	height:100px;
+	line-height:100px;
+	padding-right:30px;
+	    position:relative;
+	    .text-right;
+		border:1px solid #949393;
+	   	@media screen and (min-width: 768px){
+        line-height:33px;
+        height:33px;
+        padding-right:10px;
+		}
+	
+	}
+}
+	
+
+
+.menu1{
+padding-bottom:15px;
+@media screen and (min-width: 970px){
+		clear:none;
+		padding-bottom:0;
+		}
 }

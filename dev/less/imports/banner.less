@@ -1,0 +1,170 @@
+.banner{
+	display:none;
+	@media screen and (min-width:768px){
+		display:block;
+	}
+			.banner-slide{
+		position:relative;
+		height:100%;
+
+		.klic-left{
+          
+          width:30px;
+          height: 120px;
+          background-color: white;
+          position:absolute;
+          top:50%;
+          left:0;
+          transform:translateY(-50%);
+            cursor: pointer;
+          &:before{
+          	content:'';
+          	position:absolute;
+          	 top:50%;
+          right:50%;
+          transform:translate(50%, -50%);
+          	 .sprite(@left);
+          }
+         
+		}
+		.klic-right{
+			
+			  width:30px;
+          height: 120px;
+          background-color: white;
+          position:absolute;
+          top:50%;
+          right:0;
+          transform:translateY(-50%);
+          cursor: pointer;
+		&:after{
+			 content:'';
+         position:absolute;
+          top:50%;
+          right:50%;
+          transform:translate(50%,-50%);
+          .sprite(@right);
+		}
+	}
+	.active{
+			background-color: @bg-color;
+		}
+}
+	.banner-slide .row>.col{
+
+		height:350px;
+		@media screen and (min-width:970px){
+		height:440px;
+	}		
+	}
+.linear-gradient{
+	background: linear-gradient( to right,#f6f3ec 70%, #ece5dd 30%);
+}
+.girl768{
+	@media screen and (min-width:970px){
+		display:none;
+	}		
+}
+.girl970{
+	display:none;
+	@media screen and (min-width:970px){
+		display:inline-block;
+	}	
+}
+.text{
+   
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	text-align: center;
+	text-transform: uppercase;
+	 
+
+ 
+	.crazy{
+    text-transform: capitalize;
+    font:27px "Luxury";
+    color:@crazy;
+  
+   span{
+   	 position:relative;
+     &:before{
+	content:'';
+	position:absolute;
+    width:100%;
+	border-top:1px solid @crazy;
+	top:55%;
+	left:-110%;
+    }
+    &:after{
+	content:'';
+	position:absolute;
+    width:100%;
+	border-top:1px solid @crazy;
+	top:55%;
+	right:-110%;
+ }  
+}
+}
+	
+	.crazy-summer{
+border-bottom:4px solid @crazy;
+margin-bottom:3px;
+padding-bottom:6px;
+font:71px/53.3px "hel";
+background-image:url(../img/slider-text-bg.png);
+-webkit-background-clip:text;
+color:transparent;
+
+	}
+	.woman{
+		border-top:2px solid #aa9d96;
+		color:@crazy;
+		padding:8px 0 12px 0;
+		font:26.7px "Hel-LtCn";
+
+
+	}
+	.btn{
+		padding:0 17px;
+		.text-left;
+		box-sizing: border-box;
+		font:12px "Hel-th";
+        height:43px;
+        width:115px;
+        border:none;
+		text-transform: uppercase;	
+		border-bottom:3px solid #dd6b44;
+		&:after{
+			.triangle-now;
+		}
+		
+	}
+
+}
+.relative{
+	position:relative;
+	height:100%;
+
+}
+&-active{
+.text-center;
+padding:20px 0 20px 0;
+ .circle{
+height:10px;
+width:10px;
+border-radius:10px;
+margin-left:20px;
+background-color:#867a76;
+display:inline-block;
+cursor: pointer;
+&:first-child{
+	margin-left:0;
+}
+}
+.active{
+background-color: @bg-color;
+}
+}
+}
